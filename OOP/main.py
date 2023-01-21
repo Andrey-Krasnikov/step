@@ -5,3 +5,4 @@ c = a+b
 print(c)
 #Hello, teacher!
 #Working!
+#Ура все круто и позитивно
