@@ -1,2 +1,6 @@
 print("Hello world!")
-#hi all guysu
+a = int(input("Enter first: "))
+b = int(input("Enter second: "))
+c = a+b
+print(c)
+#yay
