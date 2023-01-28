@@ -26,6 +26,6 @@ student1.grow(height=5)
 #print(Student.col) #аналогично работает
 student2=Student(height=180, name="NeAndrey")
 print("Количество студентов: ", student2.col)
-print("Имя студента:",student2.name, ". Средний рост студента №2: ",student2.height)
+print("Имя студента:",student2.name, ". Средний рост студента №2: ",student2.height, "Возраст студента:", student2.age)
 student2.grow(height=15)
 print(student2.height)
