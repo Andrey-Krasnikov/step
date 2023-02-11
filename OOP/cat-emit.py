@@ -35,11 +35,21 @@ class Cat:
     def simulate_life(self, days):
         for i in range(days):
             print(f"День {i + 1}:")
-            self.hunger += random.randint(-1, 1)
-            self.boredom += random.randint(-1, 1)
-            self.drowsiness += random.randint(-1, 1)
-            self.thirst += random.randint(-1, 1)
-            self.health += random.randint(-1, 1)
+
+            self.hunger += random.randint(-2, 1)
+            self.boredom += random.randint(-2, 1)
+            self.drowsiness += random.randint(-2, 1)
+            self.thirst += random.randint(-2, 1)
+            self.health += random.randint(-2, 1)
+
+            if self.hunger <= 0:
+                self.eat()
+            elif self.boredom >= 5:
+                self.play()
+            elif self.thirst >=5:
+                self.drink
+            elif self.drowsiness >=5:
+                self.sleep()
 
             if self.health <= 0:
                 print(f"{self.name} умер от страшной болезни.")
@@ -61,3 +71,5 @@ class Cat:
 name = input("Введите имя кота:")
 my_cat = Cat(name=name, hunger=3, boredom=2, drowsiness=1, thirst=0, health=7)
 my_cat.simulate_life(30)
+
+#Самый крутой симулятор кота. Каждый день у кота изменяются значения жизненных показателей на фиксированное число. Если то, или иное число меньше нормы - кот делает то, или иное действие, но только один раз за цикл. Единственное, что не может сделать кот самостоятельно - вылечится. Это ему нужно будет делать самому, выполняя рандомные параметры. Проживая один день, его показатели рандомно изменяются.
